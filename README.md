@@ -112,7 +112,3 @@ To contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to the developers and community of Next.js, Convex, and Clerk for their excellent tools and services.
