@@ -1,4 +1,22 @@
+## UNIVERSITY OF GHANA
+
+## DEPARTMENT OF COMPUTER SCIENCE
+
 ## ISS A signment Group 5
+
+## Group Members
+
+1. **Emmanuel Ametepee** - 11365216
+2. ⁠**Robert Mawusi Kpodo** - 11365200
+3. **Emmanuel Hemans** - 11365190
+4. **Ampomah Kofi** - 11366516
+5. **Nana Kumi Joshua** - 11005268
+6. **Nartey Michael** - 11365196
+7. ⁠**Isaac Abraham-Mumuni** - 11365255
+8. ⁠**Samuel Odoom Ayew** -11366113
+9. **GIDEON TATAGAH** - 11365208
+10. **Alfred Foli**-11365899
+11. **Paula Herzuah** - 11365281
 
 ---
 
@@ -108,7 +126,3 @@ To contribute:
 3. Commit your changes (`git commit -m 'Add your feature'`).
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
