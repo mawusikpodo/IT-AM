@@ -83,18 +83,38 @@ export function FileBrowser({
     })) ?? [];
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-bold">{title}</h1>
+    <div className="p-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
+        <h1 className="text-2xl lg:text-4xl font-bold mb-4 lg:mb-0">{title}</h1>
 
-        <SearchBar query={query} setQuery={setQuery} />
-
-        <UploadButton />
+        <div className="flex flex-col lg:flex-row items-center gap-4 w-full lg:w-auto">
+          <SearchBar query={query} setQuery={setQuery} />
+        </div>
       </div>
 
       <Tabs defaultValue="grid">
         <div className="flex justify-between items-center">
-          <TabsList className="mb-2">
+          <div className="flex flex-col lg:flex-row gap-2 items-center">
+            {/* <Label htmlFor="type-select">Type Filter</Label> */}
+            <Select
+              value={type}
+              onValueChange={(newType) => {
+                setType(newType as any);
+              }}
+            >
+              <SelectTrigger id="type-select" className="w-full lg:w-[180px]">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All</SelectItem>
+                <SelectItem value="image">Image</SelectItem>
+                {/* <SelectItem value="csv">CSV</SelectItem> */}
+                <SelectItem value="pdf">PDF </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <TabsList className=" lg:mb-0">
             <TabsTrigger value="grid" className="flex gap-2 items-center">
               <GridIcon />
               Grid
@@ -104,25 +124,7 @@ export function FileBrowser({
             </TabsTrigger>
           </TabsList>
 
-          <div className="flex gap-2 items-center">
-            <Label htmlFor="type-select">Type Filter</Label>
-            <Select
-              value={type}
-              onValueChange={(newType) => {
-                setType(newType as any);
-              }}
-            >
-              <SelectTrigger id="type-select" className="w-[180px]">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All</SelectItem>
-                <SelectItem value="image">Image</SelectItem>
-                {/* <SelectItem value="csv">CSV</SelectItem> */}
-                <SelectItem value="pdf">PDF</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          <UploadButton />
         </div>
 
         {isLoading && (
@@ -133,7 +135,7 @@ export function FileBrowser({
         )}
 
         <TabsContent value="grid">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {modifiedFiles?.map((file) => {
               return <FileCard key={file._id} file={file} />;
             })}
