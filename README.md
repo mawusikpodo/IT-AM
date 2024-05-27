@@ -2,7 +2,7 @@
 
 ## DEPARTMENT OF COMPUTER SCIENCE
 
-## ISS A signment Group 5
+## ISS Assignment Group 5
 
 ## Group Members
 
@@ -17,6 +17,8 @@
 9. **GIDEON TATAGAH** - 11365208
 10. **Alfred Foli**-11365899
 11. **Paula Herzuah** - 11365281
+12. **Johnny Orleans De-Graft Hanson** - 11365288
+13. **Randy Ofori-Atta** - 11365204
 
 ---
 
